@@ -12,13 +12,13 @@
   <TemplateURL>https://github.com/LolHens/docker-templates</TemplateURL>
   <Icon>http://i.imgur.com/ookR0Ld.png</Icon>
   <ExtraParams/>
-  <DateInstalled>1461965079</DateInstalled>
+  <DateInstalled>1461967368</DateInstalled>
   <Description/>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8080</HostPort>
+        <HostPort/>
         <ContainerPort>8081</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -26,30 +26,36 @@
   </Networking>
   <Data>
     <Volume>
+      <HostDir>/mnt/user</HostDir>
+      <ContainerDir>/unraid</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
       <HostDir>/mnt/user/appdata/artifactory/data</HostDir>
-      <ContainerDir>/var/opt/jfrog/artifactory/data</ContainerDir>
+      <ContainerDir>/app/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/artifactory/backup</HostDir>
-      <ContainerDir>/var/opt/jfrog/artifactory/backup</ContainerDir>
+      <ContainerDir>/app/backup</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/artifactory/logs</HostDir>
-      <ContainerDir>/var/opt/jfrog/artifactory/logs</ContainerDir>
+      <ContainerDir>/app/logs</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/artifactory/etc</HostDir>
-      <ContainerDir>/var/opt/jfrog/artifactory/etc</ContainerDir>
+      <ContainerDir>/app/etc</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment/>
-  <Config Name="HTTP Server Port" Target="8081" Default="8080" Mode="tcp" Description="Container Port: 8081" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
-  <Config Name="Data Path" Target="/var/opt/jfrog/artifactory/data" Default="/mnt/user/appdata/artifactory/data" Mode="rw" Description="Container Path: /var/opt/jfrog/artifactory/data" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/artifactory/data</Config>
-  <Config Name="Backup Path" Target="/var/opt/jfrog/artifactory/backup" Default="/mnt/user/appdata/artifactory/backup" Mode="rw" Description="Container Path: /var/opt/jfrog/artifactory/backup" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/artifactory/backup</Config>
-  <Config Name="Logs Path" Target="/var/opt/jfrog/artifactory/logs" Default="/mnt/user/appdata/artifactory/logs" Mode="rw" Description="Container Path: /var/opt/jfrog/artifactory/logs" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/artifactory/logs</Config>
-  <Config Name="Etc Path" Target="/var/opt/jfrog/artifactory/etc" Default="/mnt/user/appdata/artifactory/etc" Mode="rw" Description="Container Path: /var/opt/jfrog/artifactory/etc" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/artifactory/etc</Config>
+  <Config Name="HTTP Server Port" Target="8081" Default="8080" Mode="tcp" Description="Container Port: 8081" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="unRAID Share Path" Target="/unraid" Default="/mnt/user" Mode="rw" Description="Container Path: /unraid" Type="Path" Display="hidden" Required="false" Mask="false">/mnt/user</Config>
+  <Config Name="Data Path" Target="/app/data" Default="/mnt/user/appdata/artifactory/data" Mode="rw" Description="Container Path: /app/data" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/artifactory/data</Config>
+  <Config Name="Backup Path" Target="/app/backup" Default="/mnt/user/appdata/artifactory/backup" Mode="rw" Description="Container Path: /app/backup" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/artifactory/backup</Config>
+  <Config Name="Logs Path" Target="/app/logs" Default="/mnt/user/appdata/artifactory/logs" Mode="rw" Description="Container Path: /app/logs" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/artifactory/logs</Config>
+  <Config Name="Etc Path" Target="/app/etc" Default="/mnt/user/appdata/artifactory/etc" Mode="rw" Description="Container Path: /app/etc" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/artifactory/etc</Config>
 </Container>

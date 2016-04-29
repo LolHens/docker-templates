@@ -10,15 +10,15 @@
   <Category>Tools:</Category>
   <WebUI>http://[IP]:[PORT:8080]/</WebUI>
   <TemplateURL>https://github.com/LolHens/docker-templates</TemplateURL>
-  <Icon>http://i.imgur.com/stlnoKR.png</Icon>
+  <Icon>http://i.imgur.com/n5htYYr.png</Icon>
   <ExtraParams/>
-  <DateInstalled>1461964976</DateInstalled>
+  <DateInstalled>1461967296</DateInstalled>
   <Description>cAdvisor (Container Advisor) provides container users an understanding of the resource usage and performance characteristics of their running containers. It is a running daemon that collects, aggregates, processes, and exports information about running containers. Specifically, for each container it keeps resource isolation parameters, historical resource usage, and histograms of complete historical resource usage. This data is exported by container and machine-wide.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8080</HostPort>
+        <HostPort/>
         <ContainerPort>8080</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -58,7 +58,7 @@
       <Mode/>
     </Variable>
   </Environment>
-  <Config Name="HTTP Server Port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="HTTP Server Port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false"/>
   <Config Name="unRAID Share Path" Target="/unraid" Default="/mnt/user" Mode="rw" Description="Container Path: /unraid" Type="Path" Display="hidden" Required="false" Mask="false">/mnt/user</Config>
   <Config Name="Root Path" Target="/rootfs" Default="/" Mode="ro" Description="Container Path: /rootfs DO NOT MODIFY" Type="Path" Display="advanced-hide" Required="true" Mask="false">/</Config>
   <Config Name="Run Path" Target="/var/run" Default="/var/run" Mode="rw" Description="Container Path: /var/run DO NOT MODIFY" Type="Path" Display="advanced-hide" Required="true" Mask="false">/var/run</Config>
