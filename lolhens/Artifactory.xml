@@ -7,12 +7,12 @@
   <Privileged>false</Privileged>
   <Support/>
   <Overview>The world&#x2019;s most advanced repository manager. Artifactory offers powerful enterprise feature and fine-grained permission control behind a sleek and easy-to-use UI.</Overview>
-  <Category>Tools:</Category>
+  <Category>Productivity: Tools:</Category>
   <WebUI>http://[IP]:[PORT:8081]/</WebUI>
   <TemplateURL>https://github.com/LolHens/docker-templates</TemplateURL>
   <Icon>http://i.imgur.com/ookR0Ld.png</Icon>
   <ExtraParams/>
-  <DateInstalled>1462140814</DateInstalled>
+  <DateInstalled>1462141636</DateInstalled>
   <Description>The world&#x2019;s most advanced repository manager. Artifactory offers powerful enterprise feature and fine-grained permission control behind a sleek and easy-to-use UI.</Description>
   <Networking>
     <Mode>bridge</Mode>
