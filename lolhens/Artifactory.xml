@@ -12,13 +12,13 @@
   <TemplateURL>https://github.com/LolHens/docker-templates</TemplateURL>
   <Icon>http://i.imgur.com/ookR0Ld.png</Icon>
   <ExtraParams/>
-  <DateInstalled>1462141636</DateInstalled>
+  <DateInstalled>1462712238</DateInstalled>
   <Description>The world&#x2019;s most advanced repository manager. Artifactory offers powerful enterprise feature and fine-grained permission control behind a sleek and easy-to-use UI.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort/>
+        <HostPort>8080</HostPort>
         <ContainerPort>8081</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
@@ -27,29 +27,29 @@
   <Data>
     <Volume>
       <HostDir>/mnt/user/appdata/artifactory/data</HostDir>
-      <ContainerDir>/artifactory/data</ContainerDir>
+      <ContainerDir>/usr/local/artifactory/data</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/artifactory/backup</HostDir>
-      <ContainerDir>/artifactory/backup</ContainerDir>
+      <HostDir>/mnt/user/appdata/artifactory/config</HostDir>
+      <ContainerDir>/usr/local/artifactory/etc</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
       <HostDir>/mnt/user/appdata/artifactory/logs</HostDir>
-      <ContainerDir>/artifactory/logs</ContainerDir>
+      <ContainerDir>/usr/local/artifactory/logs</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
     <Volume>
-      <HostDir>/mnt/user/appdata/artifactory/etc</HostDir>
-      <ContainerDir>/artifactory/etc</ContainerDir>
+      <HostDir>/mnt/user/appdata/artifactory/backup</HostDir>
+      <ContainerDir>/usr/local/artifactory/backup</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
   <Environment/>
-  <Config Name="HTTP Server Port" Target="8081" Default="8080" Mode="tcp" Description="Container Port: 8081" Type="Port" Display="always" Required="true" Mask="false"/>
-  <Config Name="Data Path" Target="/artifactory/data" Default="/mnt/user/appdata/artifactory/data" Mode="rw" Description="Container Path: /artifactory/data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/artifactory/data</Config>
-  <Config Name="Backup Path" Target="/artifactory/backup" Default="/mnt/user/appdata/artifactory/backup" Mode="rw" Description="Container Path: /artifactory/backup" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/artifactory/backup</Config>
-  <Config Name="Logs Path" Target="/artifactory/logs" Default="/mnt/user/appdata/artifactory/logs" Mode="rw" Description="Container Path: /artifactory/logs" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/artifactory/logs</Config>
-  <Config Name="Etc Path" Target="/artifactory/etc" Default="/mnt/user/appdata/artifactory/etc" Mode="rw" Description="Container Path: /artifactory/etc" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/artifactory/etc</Config>
+  <Config Name="HTTP Server Port" Target="8081" Default="8080" Mode="tcp" Description="Container Port: 8081" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="appdata/data Path" Target="/usr/local/artifactory/data" Default="/mnt/user/appdata/artifactory/data" Mode="rw" Description="Container Path: /usr/local/artifactory/data" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/artifactory/data</Config>
+  <Config Name="appdata/config Path" Target="/usr/local/artifactory/etc" Default="/mnt/user/appdata/artifactory/config" Mode="rw" Description="Container Path: /usr/local/artifactory/etc" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/artifactory/config</Config>
+  <Config Name="appdata/logs Path" Target="/usr/local/artifactory/logs" Default="/mnt/user/appdata/artifactory/logs" Mode="rw" Description="Container Path: /usr/local/artifactory/logs" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/artifactory/logs</Config>
+  <Config Name="appdata/backup Path" Target="/usr/local/artifactory/backup" Default="/mnt/user/appdata/artifactory/backup" Mode="rw" Description="Container Path: /usr/local/artifactory/backup" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/artifactory/backup</Config>
 </Container>
