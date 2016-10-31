@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Hamachi</Name>
+  <Repository>lolhens/hamachi</Repository>
+  <Registry>https://hub.docker.com/r/lolhens/hamachi/</Registry>
+  <Network>host</Network>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Overview>LogMeIn Hamachi VPN</Overview>
+  <Category>Tools: Network:Other</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://www.vpn.net/Content/Images/hamachi-small.png</Icon>
+  <ExtraParams/>
+  <DateInstalled>1477941844</DateInstalled>
+  <Description>LogMeIn Hamachi VPN</Description>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/hamachi</HostDir>
+      <ContainerDir>/usr/local/appdata/hamachi</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/etc/localtime</HostDir>
+      <ContainerDir>/etc/localtime</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>ACCOUNT</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="Account" Target="ACCOUNT" Default="" Mode="" Description="Container Variable: ACCOUNT" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="appdata Path" Target="/usr/local/appdata/hamachi" Default="/mnt/user/appdata/hamachi" Mode="rw" Description="Container Path: /usr/local/appdata/hamachi" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/hamachi</Config>
+  <Config Name="localtime Path" Target="/etc/localtime" Default="/etc/localtime" Mode="ro" Description="Container Path: /etc/localtime" Type="Path" Display="advanced-hide" Required="true" Mask="false">/etc/localtime</Config>
+</Container>
