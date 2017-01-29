@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>phpMyAdmin</Name>
+  <Repository>phpmyadmin/phpmyadmin:latest</Repository>
+  <Registry>https://hub.docker.com/r/phpmyadmin/phpmyadmin/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Overview/>
+  <Category>Tools: Other:</Category>
+  <WebUI>http://[IP]:[PORT:80]/</WebUI>
+  <TemplateURL/>
+  <Icon>http://www.freeiconspng.com/uploads/phpmyadmin-icon-4.png</Icon>
+  <ExtraParams/>
+  <DateInstalled>1485699550</DateInstalled>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>MYSQL_ROOT_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>PMA_HOST</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>3306</Value>
+      <Name>PMA_PORT</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="HTTP Server Port" Target="80" Default="8080" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="MySQL Host" Target="PMA_HOST" Default="" Mode="" Description="Container Variable: PMA_HOST" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="MySQL Port" Target="PMA_PORT" Default="3306" Mode="" Description="Container Variable: PMA_PORT" Type="Variable" Display="always" Required="true" Mask="false">3306</Config>
+  <Config Name="MySQL root password" Target="MYSQL_ROOT_PASSWORD" Default="" Mode="" Description="Container Variable: MYSQL_ROOT_PASSWORD" Type="Variable" Display="always" Required="true" Mask="false"/>
+</Container>
