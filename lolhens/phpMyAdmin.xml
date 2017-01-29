@@ -9,7 +9,7 @@
   <Overview/>
   <Category>Tools: Other:</Category>
   <WebUI>http://[IP]:[PORT:80]/</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://github.com/LolHens/docker-templates</TemplateURL>
   <Icon>http://www.freeiconspng.com/uploads/phpmyadmin-icon-4.png</Icon>
   <ExtraParams/>
   <DateInstalled>1485699550</DateInstalled>
