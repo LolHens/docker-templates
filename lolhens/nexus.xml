@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>NexusRepositoryManager3</Name>
+  <Name>Nexus</Name>
   <Repository>sonatype/nexus3:latest</Repository>
   <Registry>https://hub.docker.com/r/sonatype/nexus3/</Registry>
   <Network>bridge</Network>
