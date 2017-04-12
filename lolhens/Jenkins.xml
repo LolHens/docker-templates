@@ -1,30 +1,30 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Jenkins</Name>
-  <Repository>library/jenkins:latest</Repository>
-  <Registry>https://hub.docker.com/r/library/jenkins/</Registry>
+  <Repository>lolhens/blueocean:latest</Repository>
+  <Registry>https://hub.docker.com/r/lolhens/blueocean/</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
   <Support/>
   <Overview>Jenkins is an open source automation server with an unparalleled plugin ecosystem to support practically every tool as part of your delivery pipelines. Whether your goal is continuous integration, continuous delivery or something else entirely, Jenkins can help automate it.</Overview>
   <Category>Productivity: Tools:</Category>
-  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <WebUI>http://[IP]:[PORT:8080]/blue</WebUI>
   <TemplateURL>https://github.com/LolHens/docker-templates</TemplateURL>
   <Icon>http://i.imgur.com/E0x4fYN.png</Icon>
   <ExtraParams/>
-  <DateInstalled>1462712846</DateInstalled>
+  <DateInstalled>1492038026</DateInstalled>
   <Description>Jenkins is an open source automation server with an unparalleled plugin ecosystem to support practically every tool as part of your delivery pipelines. Whether your goal is continuous integration, continuous delivery or something else entirely, Jenkins can help automate it.</Description>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
       <Port>
-        <HostPort>8080</HostPort>
+        <HostPort>8081</HostPort>
         <ContainerPort>8080</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort/>
-        <ContainerPort>50000</ContainerPort>
+        <HostPort>4040</HostPort>
+        <ContainerPort>4040</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
     </Publish>
@@ -35,9 +35,15 @@
       <ContainerDir>/var/jenkins_home</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
   <Environment/>
   <Config Name="HTTP Server Port" Target="8080" Default="8080" Mode="tcp" Description="Container Port: 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="appdata Path" Target="/var/jenkins_home" Default="/mnt/user/appdata/jenkins" Mode="rw" Description="Container Path: /var/jenkins_home" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/jenkins</Config>
-  <Config Name="Slave Agent Port" Target="50000" Default="" Mode="tcp" Description="Container Port: 50000&#13;&#10;Default: 50000" Type="Port" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="Container Path: /var/run/docker.sock" Type="Path" Display="advanced" Required="false" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="Port 4040" Target="4040" Default="4040" Mode="tcp" Description="Container Port: 4040" Type="Port" Display="advanced" Required="false" Mask="false">4040</Config>
 </Container>
