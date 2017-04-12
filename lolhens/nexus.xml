@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>NexusRepositoryManager3</Name>
+  <Repository>sonatype/nexus3:latest</Repository>
+  <Registry>https://hub.docker.com/r/sonatype/nexus3/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Overview>The world's only repository manager with FREE support for popular formats.</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8081]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://avatars2.githubusercontent.com/u/44938?v=3&amp;amp;s=200</Icon>
+  <ExtraParams/>
+  <DateInstalled>1491990287</DateInstalled>
+  <Description>The world's only repository manager with FREE support for popular formats.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nexus</HostDir>
+      <ContainerDir>/nexus-data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Config Name="HTTP Server Port" Target="8081" Default="8080" Mode="tcp" Description="Container Port: 8081" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="appdata Path" Target="/nexus-data" Default="/mnt/user/appdata/nexus" Mode="rw" Description="Container Path: /nexus-data" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/nexus</Config>
+</Container>
