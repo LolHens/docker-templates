@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Teleport</Name>
+  <Repository>lolhens/teleport:latest</Repository>
+  <Registry>https://hub.docker.com/r/lolhens/teleport/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Overview/>
+  <Category/>
+  <WebUI>https://[IP]:[PORT:3080]/</WebUI>
+  <TemplateURL>https://github.com/LolHens/docker-templates</TemplateURL>
+  <Icon>https://avatars3.githubusercontent.com/u/10781132?v=3&amp;amp;s=200</Icon>
+  <ExtraParams/>
+  <DateInstalled>1492605326</DateInstalled>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3080</HostPort>
+        <ContainerPort>3080</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3022</HostPort>
+        <ContainerPort>3022</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3023</HostPort>
+        <ContainerPort>3023</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3024</HostPort>
+        <ContainerPort>3024</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>3025</HostPort>
+        <ContainerPort>3025</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/teleport</HostDir>
+      <ContainerDir>/usr/local/appdata/teleport</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value></Value>
+      <Name>TELEPORT_NODENAME</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Config Name="Node Name" Target="TELEPORT_NODENAME" Default="" Mode="" Description="Container Variable: TELEPORT_NODENAME" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="HTTP Server Port" Target="3080" Default="3080" Mode="tcp" Description="Container Port: 3080" Type="Port" Display="always" Required="true" Mask="false">3080</Config>
+  <Config Name="appdata Path" Target="/usr/local/appdata/teleport" Default="/mnt/user/appdata/teleport" Mode="rw" Description="Container Path: /usr/local/appdata/teleport" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/teleport</Config>
+  <Config Name="SSH Port" Target="3022" Default="3022" Mode="tcp" Description="Container Port: 3022" Type="Port" Display="advanced" Required="false" Mask="false">3022</Config>
+  <Config Name="SSH Proxy Port" Target="3023" Default="3023" Mode="tcp" Description="Container Port: 3023" Type="Port" Display="advanced" Required="false" Mask="false">3023</Config>
+  <Config Name="Reverse Tunnel Port" Target="3024" Default="3024" Mode="tcp" Description="Container Port: 3024" Type="Port" Display="advanced" Required="false" Mask="false">3024</Config>
+  <Config Name="Auth Port" Target="3025" Default="3025" Mode="tcp" Description="Container Port: 3025" Type="Port" Display="advanced" Required="false" Mask="false">3025</Config>
+</Container>
