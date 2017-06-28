@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>TeamCity</Name>
+  <Repository>jetbrains/teamcity-server:latest</Repository>
+  <Registry>https://hub.docker.com/r/jetbrains/teamcity-server/</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Overview>Powerful Continuous Integration out of the box.</Overview>
+  <Category>Productivity: Tools:</Category>
+  <WebUI>http://[IP]:[PORT:8111]/</WebUI>
+  <TemplateURL>https://github.com/LolHens/docker-templates</TemplateURL>
+  <Icon>http://i.imgur.com/0xNvCf3.png</Icon>
+  <ExtraParams/>
+  <DateInstalled>1498644361</DateInstalled>
+  <Description>Powerful Continuous Integration out of the box.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>8111</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/teamcity</HostDir>
+      <ContainerDir>/data/teamcity_server/datadir</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/teamcity/logs</HostDir>
+      <ContainerDir>/opt/teamcity/logs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Config Name="HTTP Server Port" Target="8111" Default="8080" Mode="tcp" Description="Container Port: 8111" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="appdata Path" Target="/data/teamcity_server/datadir" Default="/mnt/user/appdata/teamcity" Mode="rw" Description="Container Path: /data/teamcity_server/datadir" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/teamcity</Config>
+  <Config Name="log Path" Target="/opt/teamcity/logs" Default="/mnt/user/appdata/teamcity/logs" Mode="rw" Description="Container Path: /opt/teamcity/logs" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/teamcity/logs</Config>
+</Container>
