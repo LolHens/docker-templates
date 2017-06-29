@@ -31,7 +31,13 @@
       <Name>SERVER_URL</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value>agent1</Value>
+      <Name>AGENT_NAME</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Config Name="TeamCity Server URL" Target="SERVER_URL" Default="" Mode="" Description="Container Variable: SERVER_URL" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="Agent Name" Target="AGENT_NAME" Default="agent1" Mode="" Description="Container Variable: AGENT_NAME" Type="Variable" Display="always" Required="true" Mask="false">agent1</Config>
   <Config Name="appdata Path" Target="/data/teamcity_agent/conf" Default="/mnt/user/appdata/teamcity-agent" Mode="rw" Description="Container Path: /data/teamcity_agent/conf" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/teamcity-agent</Config>
 </Container>
