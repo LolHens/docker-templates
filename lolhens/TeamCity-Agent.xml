@@ -18,7 +18,7 @@
     <Publish/>
   </Networking>
   <Data>
-    <Volume type="appdata">
+    <Volume type=“appdata”>
       <HostDir>/mnt/user/appdata/teamcity-agent</HostDir>
       <ContainerDir>/data/teamcity_agent/conf</ContainerDir>
       <Mode>rw</Mode>
