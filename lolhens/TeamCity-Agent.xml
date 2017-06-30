@@ -12,7 +12,6 @@
   <TemplateURL>https://github.com/LolHens/docker-templates</TemplateURL>
   <Icon>http://i.imgur.com/0xNvCf3.png</Icon>
   <ExtraParams/>
-  <DateInstalled>1498646060</DateInstalled>
   <Description/>
   <Networking>
     <Mode>bridge</Mode>
